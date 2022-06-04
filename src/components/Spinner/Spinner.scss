@@ -1,0 +1,32 @@
+.spinner__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1em;
+
+    .spinner__body {
+        width: 2em;
+        height: 2em;
+        border-top: 5px solid #333;
+        border-right: 5px solid #333;
+        border-bottom: 5px solid #333;
+        border-left: 5px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    .spinner__text {
+        margin-left: 1.2em;
+        font-size: 1.2em;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,15 @@
+.search-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .search-form__inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .search-form__btn {
+        margin-left: 1em;
+    }
+}

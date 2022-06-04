@@ -1,0 +1,11 @@
+.search__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 25%;
+
+  .search__title {
+    margin-bottom: 0.5em;
+  }
+}
