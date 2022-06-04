@@ -15,22 +15,24 @@ function SearchForm(): ReactElement {
   const [ input, setInput ] = useState<string>('');
 
   // Improvement: use a validation library
-  const validate = (): boolean => {
+  const hasErrors = (): string | false => {
     if (!input.length) {
-      setError(TEXT.SEARCH.ERROR.NO_INPUT);
+      return TEXT.SEARCH.ERROR.NO_INPUT;
     }
     if (!input.trim().length) {
-      setError(TEXT.SEARCH.ERROR.EMPTY);
+      return TEXT.SEARCH.ERROR.EMPTY;
     }
-
-    return error === '';
+    return false;
   }
   const update = (event: any): void => {
+    setError('');
     setInput(event.target.value);
   }
   const submit = (event: any): boolean => {
-    if (validate()) {
+    const formError = hasErrors();
+    if (formError) {
       event.preventDefault();
+      setError(formError);
       return false;
     }
     // Let it submit normally if no errors are found

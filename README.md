@@ -1,10 +1,18 @@
 # apex-movies
 A prototype React app that fetches TMDb, IMDB and Wikipedia data available for movies.
 
----
+**Libraries used:**
+- Typescript
+- React
+- GraphQL
+- Axios
+- Material UI
+- Jotai
+- SCSS
+- Jest
 
-- [x] Typescript
-- [ ] Working prototype
+**Tasks complete:**
+- [x] Working prototype
 - [x] Loading spinner
 - [x] Related search
 - [x] Material UI

@@ -11,10 +11,10 @@ function WikiContent({ data }:any): ReactElement {
   const openWiki = () => window.open(`${LINK_URLS.WIKI}${data.wikiId}`, '_blank');
   const openTmdb = () => window.open(`${LINK_URLS.TMDB}${data.tmdbId}`, '_blank');
   const home = () => navigate('/');
-  
+
   return (
     <Box className='wiki-content__wrap'>
-      <Typography variant='h1' className='wiki-content__heading'>
+      <Typography variant='h2' component='h1' className='wiki-content__heading'>
         { data.title }
       </Typography>
       <Divider className='wiki-content__divider' variant='inset' />
